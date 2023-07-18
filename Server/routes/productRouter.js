@@ -99,7 +99,7 @@ productRouter.get(
       ...ratingFilter,
       ...priceFilter,
     })
-      .sortorder(sortorder)
+      .sort(sortorder)
       .skip(pageSize * (page - 1))
       .limit(pageSize);
 
