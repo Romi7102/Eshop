@@ -7,10 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header{
-  background-color: #404040;
-  padding: 1rem;
-}
 header a {
    color: #ffffff;
    font-weight: bold;
@@ -29,4 +25,32 @@ code {
   justify-content: center;
   gap: 20
   px;
+}
+
+main {
+  width: min(70rem, 100% - 4rem);
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+main a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.rating span {
+  color: #ffc000;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  background-color: #f0c040;
+  color: #000000;
+  border-width: 0px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #d3a62c;
 }

@@ -1,0 +1,43 @@
+:root{
+    --card-height: 600px
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: var(--card-height);
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: none;
+    scale: 1;
+
+    &:hover{
+        box-shadow: 10px 10px 10px #888;
+        scale: 1.02;
+    }
+}
+
+.card-image-page{
+    max-width: auto;
+    height: calc(var(--card-height) / 3 * 2);
+    object-fit: contain;
+    
+    
+    /* max-height: 100%; */
+    /* aspect-ratio: 4/3; */
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(var(--card-height) / 3 );;
+}
+.text-shortner{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

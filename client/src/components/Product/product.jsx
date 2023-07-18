@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Rating from "./rating";
+import Rating from "../Rating/rating";
+import "./product.css";
 
 const Product = ({product}) => {
   const addToCartHandler = (product) => {
@@ -19,7 +20,7 @@ const Product = ({product}) => {
             className="card-image-page"
           />
           <Card.Body className="card-body">
-            <Card.Title className="text-shortner">{product.name}</Card.Title>
+            <Card.Title className="text-shortner">{product.title}</Card.Title>
             <Rating
               rating={product.rating.rate}
               numReviews={product.rating.count}

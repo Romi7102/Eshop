@@ -1,4 +1,5 @@
 import React from "react";
+import './rating.css';
 
 const Rating = ({rating, numReviews, caption}) => {
   return (
