@@ -19,13 +19,12 @@ code {
     monospace;
 }
 
-.container{
+/* .container{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20
-  px;
-}
+  gap: 20px;
+} */
 
 main {
   width: min(70rem, 100% - 4rem);
@@ -34,7 +33,6 @@ main {
 }
 main a{
     text-decoration: none;
-    color: #000000;
 }
 
 .rating span {

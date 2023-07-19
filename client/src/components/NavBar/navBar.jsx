@@ -18,20 +18,24 @@ const NavBar = () => {
           >
             Back
           </Link>
-          <Container className="container">
+          <Container>
             <LinkContainer to="/">
               <Navbar.Brand>
                 <img src="/imgs/amazonlogo.png" width={100} alt="AMZN" />
               </Navbar.Brand>
             </LinkContainer>
-
             <nav className="d-flex mx-auto align-items-center">
-              search text
-              <input type="text"></input>
+              <input type="text" placeholder="search text"></input>
             </nav>
 
             <Link to="/cart" className="nav-link me-4 ms-4">
               Cart
+            </Link>
+            <Link to="/signin" className="nav-link me-4 ms-4">
+              Login
+            </Link>
+            <Link to="/signup" className="nav-link me-4 ms-4">
+              Signup
             </Link>
           </Container>
         </Navbar>

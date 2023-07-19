@@ -18,6 +18,10 @@ const Product = ({product}) => {
             src={product.image}
             alt={product.title}
             className="card-image-page"
+            onError={({ currentTarget }) => {
+              currentTarget.onerror = null; // prevents looping
+              currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Image_not_available.png/640px-Image_not_available.png";
+            }}
           />
           <Card.Body className="card-body">
             <Card.Title className="text-shortner">{product.title}</Card.Title>
