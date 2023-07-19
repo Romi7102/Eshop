@@ -6,6 +6,10 @@ import "./navBar.css";
 
 const NavBar = () => {
   const navigate = useNavigate();
+  const signOutHandler = () => {
+    localStorage.removeItem("userInfo");
+    navigate("/");
+  };
   return (
     <>
       <header className="App-header">
@@ -37,6 +41,7 @@ const NavBar = () => {
             <Link to="/signup" className="nav-link me-4 ms-4">
               Signup
             </Link>
+            <button className="nav-link me-4 ms-4" onClick={signOutHandler}>Sign out</button>
           </Container>
         </Navbar>
       </header>
