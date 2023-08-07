@@ -484,7 +484,7 @@ const data = {
       description: 'Not-Standard USB Charger',
       category: 'Electronics',
       image:
-        'https://shop.fairphone.com/media/catalog/product/cache/f951d578fe9eab859de9806fdcf92465/1/0/1080x1080_usb_3.2_cable_2_.png',
+        'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6419/6419159_rd.jpg',
       countInStock: 21,
       token: 'USB Charger 3.2',
       brand: 'Samtongue',

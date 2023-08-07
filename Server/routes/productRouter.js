@@ -88,7 +88,7 @@ productRouter.get(
         : order === "highest"
         ? { price: -1 }
         : order === "toprated"
-        ? { rating: 1 }
+        ? { rating: -1 }
         : order === "newest"
         ? { createdAt: -1 }
         : { _id: -1 };
@@ -103,8 +103,12 @@ productRouter.get(
       .skip(pageSize * (page - 1))
       .limit(pageSize);
 
-    const productsCount = products.length;
-
+    const productsCount = await Product.countDocuments({
+      ...queryFilter,
+      ...categoryFilter,
+      ...ratingFilter,
+      ...priceFilter,
+    });;
     res.send({
       products,
       page,
