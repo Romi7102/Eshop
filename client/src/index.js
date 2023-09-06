@@ -9,7 +9,8 @@ import { StoreProvider } from "./Context/Store";
 import { HelmetProvider } from "react-helmet-async";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:5000/api";
+axios.defaults.baseURL = process.env.REACT_APP_API_ROUTE ? process.env.REACT_APP_API_ROUTE : "http://localhost:5000/api";
+console.log(process.env.REACT_APP_API_ROUTE);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
